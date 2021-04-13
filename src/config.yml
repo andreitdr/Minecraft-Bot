@@ -1,0 +1,71 @@
+#Created by Wizzy
+
+#General Settings
+general:
+  # Sets the bot ON ('true') or OFF ('false'). Restart is REQUIRED
+  # Default: true
+  enabled: true
+
+  #Bot settings
+  bot:
+
+  #Bot Prefix (accepts Colors)
+  #Default:
+    #prefix: '[BOT]'
+    prefix: '[BOT]'
+
+#Commands:
+commands:
+  hello:
+    enabled: true
+    respond_console: true
+    respond_player: true
+    permission_node: 'bot.commands.hello'
+
+  reload:
+    enabled: true
+    respond_console: true
+    respond_player: true
+    permission_node: 'bot.commands.reload'
+
+  ct:
+    enabled: true
+    respond_console: true
+    respond_player: true
+    permission_node: 'bot.commands.current_time'
+
+  daily:
+    enabled: true
+    permission_node: 'bot.commands.daily'
+
+  killentity:
+    enabled: true
+    permission_node: 'bot.commands.killentity'
+
+  fly:
+    enabled: true
+    permission_node: 'bot.commands.fly'
+
+  nick:
+    enabled: true
+    permission_node: 'bot.commands.nick'
+
+  vanish:
+    enabled: true
+    permission_node: 'bot.commands.vanish'
+
+
+shorts:
+  gm:
+    enabled: true
+    original: 'gamemode'
+    arguments: '0,1,2,3'
+    permission_node: 'bot.shorts.gm'
+
+  day:
+    enabled: true
+    permission_node: 'bot.shorts.day'
+
+  night:
+    enabled: true
+    permission_node: 'bot.shorts.night'

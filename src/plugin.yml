@@ -1,0 +1,51 @@
+#Minnimum version: 1.13
+name: Minecraft_Bot
+version: 1.0
+author: Wizzy
+main: org.interactivebot.Main
+description: A simple bot for minecraft
+load: POSTWORLD
+api-version: 1.13
+
+#Commands
+commands:
+  hello:
+    aliases: [hi]
+    description: This is a basic hello command
+
+  botreload:
+    aliases: [br]
+    description: Reload the bot's configuration
+
+  gm:
+    description: Short for gamemode
+
+  day:
+    description: Runs time set day command
+
+  night:
+    description: Runs time set night command
+
+  current_time:
+    aliases: [ct]
+    description: Display the current time
+
+  daily:
+    description: Display the daily reward inventory. Available once every 24h !
+
+  killentity:
+    aliases: [ke]
+    description: Kill specified entity
+
+  fly:
+    description: Allow you to fly !
+
+  nick:
+    description: Set custom name. Supports color
+
+  vanish:
+    aliases: [v]
+    description: Make yourself visible and invisible
+
+
+
