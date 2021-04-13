@@ -42,11 +42,9 @@ public class EntityKill implements CommandExecutor {
         }
 
         try{
-
             String entity = strings[0];
             ((Player) commandSender).performCommand("kill @e[type=" + entity + "]");
         }
-
         catch(Exception ex){
             Utils.SendDM(commandSender, "Invalid arguments given.\nUsage: /killentity [MonsterName]");
             return false;
