@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.interactivebot.Main;
+import org.interactivebot.utils.Console;
 import org.interactivebot.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,7 +33,7 @@ public class EntityKill implements CommandExecutor {
         }
 
         if(!(commandSender instanceof Player)){
-            Utils.SendDM(commandSender, "This command can not be used from console !!");
+            Console.WriteLine("This command can not be used from console !!");
             return false;
         }
 

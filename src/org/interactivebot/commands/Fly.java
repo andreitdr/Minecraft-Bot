@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.interactivebot.Main;
+import org.interactivebot.utils.Console;
 import org.interactivebot.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,7 +23,10 @@ public class Fly implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if(!plugin.getConfig().getBoolean("commands.fly.enabled")) return false;
-        if(!(commandSender instanceof Player)) return false;
+        if(!(commandSender instanceof Player)) {
+            Console.WriteLine("You can not use this command from console !!");
+            return false;
+        }
         Player player = (Player)commandSender;
 
         if(!player.hasPermission(plugin.getConfig().getString("commands.fly.permission_node"))) {
