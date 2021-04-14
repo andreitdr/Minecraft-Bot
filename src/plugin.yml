@@ -47,5 +47,8 @@ commands:
     aliases: [v]
     description: Make yourself visible and invisible
 
+  ping:
+    description: Ping pong (measure ping)
+
 
 

@@ -70,6 +70,7 @@ public class Main extends JavaPlugin {
         new Fly(this);
         new Nick(this);
         new Vanish(this);
+        new Ping(this);
 
     }
 

@@ -55,6 +55,7 @@ commands:
     permission_node: 'bot.commands.vanish'
 
 
+
 shorts:
   gm:
     enabled: true
