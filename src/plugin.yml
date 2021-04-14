@@ -5,7 +5,7 @@ author: Wizzy
 main: org.interactivebot.Main
 description: A simple bot for minecraft
 load: POSTWORLD
-api-version: 1.16
+api-version: 1.13
 
 #Commands
 commands:
@@ -49,6 +49,11 @@ commands:
 
   ping:
     description: Ping pong (measure ping)
+
+  changespeed:
+    aliases: [cs]
+    description: Change the fly or walk speed
+
 
 
 

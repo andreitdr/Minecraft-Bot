@@ -58,6 +58,10 @@ commands:
     enabled: true
     permission_node: 'bot.commands.ping'
 
+  changespeed:
+    enabled: true
+    permission_node: 'bot.commands.changespeed'
+
 
 
 shorts:

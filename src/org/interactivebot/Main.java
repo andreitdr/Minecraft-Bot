@@ -71,13 +71,13 @@ public class Main extends JavaPlugin {
         new Nick(this);
         new Vanish(this);
         new Ping(this);
+        new ChangeSpeed(this);
 
     }
 
     public void EnableListeners(){
         pluginManager.registerEvents(new PlayerJoin(),this);
         pluginManager.registerEvents(new PlayerQuit(), this);
-
         pluginManager.registerEvents(new DailyEventInventoryListener(), this);
     }
 }

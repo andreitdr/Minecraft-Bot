@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.interactivebot.Main;
+import org.interactivebot.utils.Console;
 import org.interactivebot.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,8 +23,16 @@ public class Ping implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+        if(!plugin.getConfig().getBoolean(plugin.getConfig().getString("commands.ping.enabled"))) return false;
+        if (!(commandSender instanceof Player)){
+            Console.WriteLine("You are not allowed to use this command from console !!");
+            return false;
+        }
+        if(!((Player)commandSender).hasPermission(plugin.getConfig().getString("commands.ping.permission_node"))){
+            Utils.SendDM(commandSender, "&cYou are not allowed to use this command !");
+            return false;
+        }
 
-        if (!(commandSender instanceof Player)) return false;
         CraftPlayer player = (CraftPlayer)((Player)commandSender);
         int ping = player.getHandle().ping;
         if(ping <= 100)
