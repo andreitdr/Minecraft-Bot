@@ -54,6 +54,10 @@ commands:
     enabled: true
     permission_node: 'bot.commands.vanish'
 
+  ping:
+    enabled: true
+    permission_node: 'bot.commands.ping'
+
 
 
 shorts:

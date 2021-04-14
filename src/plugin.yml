@@ -5,7 +5,7 @@ author: Wizzy
 main: org.interactivebot.Main
 description: A simple bot for minecraft
 load: POSTWORLD
-api-version: 1.13
+api-version: 1.16
 
 #Commands
 commands:
