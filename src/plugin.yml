@@ -1,11 +1,11 @@
 #Minnimum version: 1.13
 name: Minecraft_Bot
-version: 1.0
+version: 1.1
 author: Wizzy
 main: org.interactivebot.Main
 description: A simple bot for minecraft
 load: POSTWORLD
-api-version: 1.13
+api-version: 1.20
 
 #Commands
 commands:

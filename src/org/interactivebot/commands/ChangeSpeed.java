@@ -7,7 +7,6 @@ import org.bukkit.entity.Player;
 import org.interactivebot.Main;
 import org.interactivebot.utils.Console;
 import org.interactivebot.utils.Utils;
-import org.jetbrains.annotations.NotNull;
 
 public class ChangeSpeed implements CommandExecutor {
 
@@ -21,7 +20,7 @@ public class ChangeSpeed implements CommandExecutor {
 
 
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public boolean onCommand(CommandSender commandSender,  Command command,  String s,  String[] strings) {
 
         if (!plugin.getConfig().getBoolean("commands.changespeed.enabled")) return false;
 

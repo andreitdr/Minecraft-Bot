@@ -3,13 +3,10 @@ package org.interactivebot.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.interactivebot.Main;
 import org.interactivebot.utils.Console;
 import org.interactivebot.utils.Utils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +23,7 @@ public class EntityKill implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public boolean onCommand( CommandSender commandSender,  Command command,  String s,  String[] strings) {
         if(!plugin.getConfig().getBoolean("commands.killentity.enabled")){
             Utils.SendDM(commandSender, "Command is not enabled on server !!!");
             return false;
@@ -55,8 +52,7 @@ public class EntityKill implements CommandExecutor {
         return false;
     }
 
-    @Nullable
-    public List<String> onTabComplete(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public List<String> onTabComplete( CommandSender commandSender,  Command command,  String s,  String[] strings) {
         if(strings.length <= 1)
             return Arrays.asList(
                     "minecraft:ender_dragon",

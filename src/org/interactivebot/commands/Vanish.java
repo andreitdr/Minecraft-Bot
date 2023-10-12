@@ -9,8 +9,6 @@ import org.bukkit.potion.PotionEffectType;
 import org.interactivebot.Main;
 import org.interactivebot.utils.Console;
 import org.interactivebot.utils.Utils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -25,7 +23,7 @@ public class Vanish implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public boolean onCommand( CommandSender commandSender,  Command command,  String s,  String[] strings) {
         if(!plugin.getConfig().getBoolean("commands.vanish.enabled")) return false;
         if(!(commandSender instanceof Player)){
             Console.WriteLine("You are not allowed to use this command from the console");
@@ -51,8 +49,6 @@ public class Vanish implements CommandExecutor {
         return true;
     }
 
-
-    @Nullable
     public List<String> onTabCommand(CommandSender sender, Command c, String s, String[] str){
         return null;
     }

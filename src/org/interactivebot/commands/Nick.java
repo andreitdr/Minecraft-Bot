@@ -6,7 +6,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.interactivebot.Main;
 import org.interactivebot.utils.Utils;
-import org.jetbrains.annotations.NotNull;
 
 public class Nick implements CommandExecutor{
 
@@ -17,7 +16,7 @@ public class Nick implements CommandExecutor{
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public boolean onCommand( CommandSender commandSender,  Command command,  String s,  String[] strings) {
 
         if(!plugin.getConfig().getBoolean("commands.nick.enabled")) return false;
         if(!(commandSender instanceof Player)) return false;

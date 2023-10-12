@@ -1,5 +1,6 @@
 package org.interactivebot;
 
+
 import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,11 +17,10 @@ public class Main extends JavaPlugin {
 
     public String BotPrefix;
 
-    private Server server;
     private PluginManager pluginManager;
 
     private void Start() {
-        this.server = getServer();
+        Server server = getServer();
         this.pluginManager = server.getPluginManager();
         BotPrefix = getConfig().getString("general.bot.prefix");
         Utils.BotPrefix = this.BotPrefix;
@@ -70,7 +70,6 @@ public class Main extends JavaPlugin {
         new Fly(this);
         new Nick(this);
         new Vanish(this);
-        new Ping(this);
         new ChangeSpeed(this);
 
     }

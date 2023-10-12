@@ -14,7 +14,6 @@ import org.interactivebot.events.UI.DailyEventInventoryListener;
 import org.interactivebot.utils.PlayerFiles.DailyEventFileManager;
 import org.interactivebot.utils.Utils;
 import org.interactivebot.utils.items.ItemManager;
-import org.jetbrains.annotations.NotNull;
 
 public class DailyEvent implements CommandExecutor, Listener {
 
@@ -27,7 +26,7 @@ public class DailyEvent implements CommandExecutor, Listener {
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(!plugin.getConfig().getBoolean("commands.daily.enabled")) return false;
 
         if(!(commandSender instanceof Player)) {
